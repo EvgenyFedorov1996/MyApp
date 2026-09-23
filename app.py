@@ -10,7 +10,7 @@ class Handler(BaseHTTPRequestHandler):
         message = f"Hello from {app}! 👋\nPath: {self.path}\n"
         self.wfile.write(message.encode())
 
-port = int(os.getenv('PORT', 8080))
+port = int(os.getenv('PORT', 8000))
 server = HTTPServer(('', port), Handler)
 print(f'Server started on port {port}')
 server.serve_forever()
